@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sovereign Nation | sovereignesports.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { ink:'#07040d', panel:'#100a1c', edge:'#2a1c47', tac:'#a855f7', amber:'#ffb020', mute:'#9a8fb5' },
+  fontFamily: { display:['Rajdhani','Impact','sans-serif'], body:['Inter','system-ui','sans-serif'] }
+}}};
+</script>
+<style>
+  :root { color-scheme: dark; box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { background:#07040d; color:#e6edf7; font-family:'Inter',system-ui,sans-serif; }
+  .grid-bg { background-image: linear-gradient(rgba(168,85,247,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(168,85,247,.08) 1px, transparent 1px); background-size: 48px 48px; }
+  .clip { clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px)); }
+  .scan { position:absolute; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#a855f7,transparent); box-shadow:0 0 18px #a855f7; animation: scan 6s ease-in-out infinite; }
+  @keyframes scan { 0%,100% { top:8% } 50% { top:92% } }
+  .pulse-dot { animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity:.3 } }
+  @media (prefers-reduced-motion: reduce) { .scan, .pulse-dot { animation:none } html { scroll-behavior:auto } }
+  .field { width:100%; background:#09050f; border:1px solid #2a1c47; padding:.75rem .9rem; color:#e6edf7; transition:border-color .2s, box-shadow .2s; }
+  .field:focus { outline:none; border-color:#a855f7; box-shadow:0 0 0 3px rgba(168,85,247,.25); }
+  a:focus-visible, button:focus-visible { outline:2px solid #ffb020; outline-offset:3px; }
+  .card { transition: transform .25s, border-color .25s; }
+  .card:hover { transform: translateY(-4px); border-color:#a855f7; }
+</style>
+</head>
+<body class="font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 bg-ink/85 backdrop-blur border-b border-edge" style="padding-top:env(safe-area-inset-top,0px)">
+  <nav class="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 font-display text-2xl font-bold tracking-wide">
+      <i data-lucide="crosshair" class="w-6 h-6 text-tac"></i> SOVEREIGN<span class="text-tac">NATION</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-mute">
+      <a href="#roster" class="hover:text-white transition">Roster</a>
+      <a href="#streams" class="hover:text-white transition">Streams</a>
+      <a href="#recruit" class="hover:text-white transition">Recruitment</a>
+      <a href="#discord" class="hover:text-white transition">Discord</a>
+    </div>
+    <a href="#recruit" class="clip bg-amber text-black font-display font-bold px-5 py-2 text-sm tracking-wide hover:brightness-110 transition">Apply now</a>
+  </nav>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center overflow-hidden grid-bg pt-24 pb-16">
+  <div class="absolute inset-0 bg-gradient-to-b from-ink/20 via-ink/60 to-ink"></div>
+  <div class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-tac/20 blur-[140px]"></div>
+  <div class="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-amber/10 blur-[140px]"></div>
+  <div class="relative max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-12 items-center w-full">
+    <div class="lg:col-span-7">
+      <p class="inline-flex items-center gap-2 border border-tac/40 bg-tac/10 text-tac px-3 py-1 text-sm font-medium mb-6">
+        <span class="w-2 h-2 rounded-full bg-tac pulse-dot"></span> Recruiting for Season 3 roster
+      </p>
+      <h1 class="font-display font-bold leading-[.9] text-6xl sm:text-7xl lg:text-8xl tracking-tight">
+        BREACH THE<br>STANDARD.<br><span class="text-transparent" style="-webkit-text-stroke:2px #a855f7">HOLD THE SITE.</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-lg text-mute">Five operators. One nation. We win rounds on utility, trades and discipline, and we are building the next roster to contest the biggest lobbies in Siege.</p>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="https://discord.gg/G9KMxEvck2" class="clip inline-flex items-center gap-2 bg-tac text-black font-display font-bold text-lg px-7 py-3 hover:brightness-110 transition shadow-[0_0_30px_rgba(168,85,247,.45)]">
+          <i data-lucide="message-circle" class="w-5 h-5"></i> Join the Discord
+        </a>
+        <a href="#recruit" class="clip inline-flex items-center gap-2 border border-amber text-amber font-display font-bold text-lg px-7 py-3 hover:bg-amber hover:text-black transition">
+          <i data-lucide="clipboard-list" class="w-5 h-5"></i> Apply for the Roster
+        </a>
+      </div>
+      <dl class="mt-12 grid grid-cols-3 max-w-md gap-6">
+        <div><dt class="text-xs text-mute">Match win rate</dt><dd class="font-display text-3xl font-bold text-white">72%</dd></div>
+        <div><dt class="text-xs text-mute">Tournaments won</dt><dd class="font-display text-3xl font-bold text-white">14</dd></div>
+        <div><dt class="text-xs text-mute">Community</dt><dd class="font-display text-3xl font-bold text-white">8.4K</dd></div>
+      </dl>
+    </div>
+
+    <!-- hype video placeholder -->
+    <div class="lg:col-span-5">
+      <div class="clip relative aspect-video bg-panel border border-edge overflow-hidden group">
+        <!-- Swap this block for: <video autoplay muted loop playsinline src="hype.mp4"> or a YouTube iframe -->
+        <div class="absolute inset-0 grid-bg opacity-70"></div>
+        <div class="scan"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center gap-3">
+          <button aria-label="Play hype video" class="w-16 h-16 rounded-full bg-tac/15 border border-tac flex items-center justify-center group-hover:bg-tac group-hover:text-black text-tac transition">
+            <i data-lucide="play" class="w-7 h-7 ml-1"></i>
+          </button>
+          <span class="text-sm text-mute">Season highlight reel goes here</span>
+        </div>
+        <div class="absolute top-3 left-3 text-xs text-tac font-medium">REC 00:42</div>
+        <div class="absolute bottom-3 right-3 text-xs text-mute">1920 × 1080</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROSTER -->
+<section id="roster" class="py-24 bg-ink">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="flex flex-wrap items-end justify-between gap-4 mb-12">
+      <div>
+        <h2 class="font-display text-5xl font-bold">Meet the team</h2>
+        <p class="text-mute mt-2">Our active operators and the roles they anchor.</p>
+      </div>
+      <p class="text-sm text-mute flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber"></span> 1 open slot: Support</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5" id="cards"></div>
+  </div>
+</section>
+
+<!-- STREAMS -->
+<section id="streams" class="py-24 bg-panel border-y border-edge">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <h2 class="font-display text-5xl font-bold">Watch us play</h2>
+      <p class="text-mute mt-3 max-w-md">Scrims, ranked grinds and official matches. Follow us where you watch.</p>
+      <div class="mt-8 space-y-3">
+        <a href="https://twitch.tv/yourteam" class="flex items-center justify-between border border-edge bg-ink px-5 py-4 hover:border-[#9146ff] hover:shadow-[0_0_24px_rgba(145,70,255,.25)] transition">
+          <span class="flex items-center gap-3 font-medium"><i data-lucide="twitch" class="w-5 h-5 text-[#9146ff]"></i> Twitch</span><span class="text-sm text-mute">@sovereignnation</span>
+        </a>
+        <a href="https://youtube.com/@yourteam" class="flex items-center justify-between border border-edge bg-ink px-5 py-4 hover:border-[#ff3b3b] hover:shadow-[0_0_24px_rgba(255,59,59,.25)] transition">
+          <span class="flex items-center gap-3 font-medium"><i data-lucide="youtube" class="w-5 h-5 text-[#ff3b3b]"></i> YouTube</span><span class="text-sm text-mute">@sovereignnation</span>
+        </a>
+        <a href="https://x.com/yourteam" class="flex items-center justify-between border border-edge bg-ink px-5 py-4 hover:border-white hover:shadow-[0_0_24px_rgba(255,255,255,.15)] transition">
+          <span class="flex items-center gap-3 font-medium"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> X (Twitter)</span><span class="text-sm text-mute">@sovereignnation</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="clip bg-ink border border-edge">
+        <div class="flex items-center justify-between px-4 py-3 border-b border-edge">
+          <span class="flex items-center gap-2 text-sm font-semibold"><span class="px-2 py-0.5 bg-[#ff3b3b] text-white text-xs font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-white pulse-dot"></span>LIVE NOW</span> Scrim vs. Crown Esports</span>
+          <span class="text-sm text-mute flex items-center gap-1.5"><i data-lucide="eye" class="w-4 h-4"></i> 1,284</span>
+        </div>
+        <!-- Replace with: <iframe src="https://player.twitch.tv/?channel=YOURCHANNEL&parent=YOURDOMAIN" allowfullscreen></iframe> -->
+        <div class="relative aspect-video grid-bg flex items-center justify-center">
+          <div class="scan"></div>
+          <div class="text-center">
+            <i data-lucide="tv" class="w-12 h-12 text-tac mx-auto"></i>
+            <p class="mt-3 text-mute text-sm">Twitch embed frame (16:9)</p>
+          </div>
+        </div>
+        <div class="px-4 py-3 border-t border-edge flex flex-wrap items-center justify-between gap-3 text-sm">
+          <span class="text-mute">Next match: Sat 8:00 PM EST, Challenger League</span>
+          <a href="https://twitch.tv/yourteam" class="text-amber font-semibold hover:underline">Open on Twitch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECRUITMENT -->
+<section id="recruit" class="py-24 bg-ink relative overflow-hidden">
+  <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-amber/10 blur-[140px] rounded-full"></div>
+  <div class="relative max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-5">
+      <h2 class="font-display text-5xl font-bold">Think you belong on the roster?</h2>
+      <p class="text-mute mt-4 max-w-md">We scout for communication, game sense and consistency, not just stats. Every application is reviewed by our coaching staff.</p>
+      <ul class="mt-8 space-y-4 text-sm">
+        <li class="flex gap-3"><i data-lucide="shield-check" class="w-5 h-5 text-tac shrink-0"></i> Structured practice: scrims 4 nights a week with VOD review</li>
+        <li class="flex gap-3"><i data-lucide="users" class="w-5 h-5 text-tac shrink-0"></i> Dedicated coach and analyst on every roster</li>
+        <li class="flex gap-3"><i data-lucide="trophy" class="w-5 h-5 text-tac shrink-0"></i> Paths into ESL, Challenger and national circuits</li>
+        <li class="flex gap-3"><i data-lucide="clock" class="w-5 h-5 text-tac shrink-0"></i> Reply to every applicant within 72 hours</li>
+      </ul>
+    </div>
+
+    <form id="apply" class="lg:col-span-7 clip bg-panel border border-edge p-6 sm:p-9 space-y-5" novalidate>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <label class="block text-sm"><span class="text-mute">Gamertag</span>
+          <input required name="tag" class="field mt-1.5" placeholder="e.g. Ghost_Echo"></label>
+        <label class="block text-sm"><span class="text-mute">Primary role</span>
+          <select required name="role" class="field mt-1.5">
+            <option value="">Select a role</option><option>Hard Breach</option><option>Entry Fragger</option><option>Support</option><option>Flex</option><option>In-Game Leader</option><option>Anchor</option>
+          </select></label>
+        <label class="block text-sm"><span class="text-mute">Current rank</span>
+          <select required name="rank" class="field mt-1.5">
+            <option value="">Select a rank</option><option>Emerald</option><option>Diamond</option><option>Champion</option><option>Top 500 Champion</option><option>Pro or semi-pro</option>
+          </select></label>
+        <label class="block text-sm"><span class="text-mute">R6 Tracker link</span>
+          <input required type="url" name="tracker" class="field mt-1.5" placeholder="https://r6.tracker.network/..."></label>
+      </div>
+      <label class="block text-sm"><span class="text-mute">Why join us?</span>
+        <textarea required name="why" rows="5" class="field mt-1.5" placeholder="Tell us about your experience, your team history and what you want to achieve."></textarea></label>
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <p id="msg" class="text-sm text-mute" role="status">All fields are required.</p>
+        <button type="submit" class="clip inline-flex items-center gap-2 bg-amber text-black font-display font-bold text-lg px-8 py-3 hover:brightness-110 transition">
+          <i data-lucide="send" class="w-5 h-5"></i> Submit application
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- DISCORD -->
+<section id="discord" class="relative overflow-hidden bg-gradient-to-r from-[#1a0b3a] via-[#2c1260] to-[#1a0b3a] border-t border-tac/40">
+  <div class="absolute inset-0 grid-bg opacity-60"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-20 text-center">
+    <h2 class="font-display text-5xl sm:text-6xl font-bold">Your next scrim is in our Discord</h2>
+    <p class="mt-4 text-white/70 max-w-xl mx-auto">Over 8,000 players, staff and fans trading intel every day.</p>
+    <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
+      <div class="bg-ink/70 border border-edge p-5"><i data-lucide="swords" class="w-6 h-6 text-amber"></i><h3 class="font-display text-xl font-bold mt-3">Weekly scrims</h3><p class="text-sm text-mute mt-1">Open lobbies every night, from Gold to Champion.</p></div>
+      <div class="bg-ink/70 border border-edge p-5"><i data-lucide="user-search" class="w-6 h-6 text-amber"></i><h3 class="font-display text-xl font-bold mt-3">Active LFG</h3><p class="text-sm text-mute mt-1">Find a stack by rank, role and region in seconds.</p></div>
+      <div class="bg-ink/70 border border-edge p-5"><i data-lucide="graduation-cap" class="w-6 h-6 text-amber"></i><h3 class="font-display text-xl font-bold mt-3">Free coaching</h3><p class="text-sm text-mute mt-1">VOD reviews and Q&amp;A sessions with our analysts.</p></div>
+    </div>
+    <a href="https://discord.gg/G9KMxEvck2 class="clip mt-10 inline-flex items-center gap-3 bg-[#8b5cf6] text-white font-display font-bold text-2xl px-10 py-4 hover:brightness-110 hover:shadow-[0_0_40px_rgba(139,92,246,.6)] transition">
+      <i data-lucide="message-circle" class="w-6 h-6"></i> Join the Discord now
+    </a>
+  </div>
+</section>
+</main>
+
+<footer class="bg-ink border-t border-edge py-8 text-center text-sm text-mute" style="padding-bottom:max(2rem, env(safe-area-inset-bottom, 0px))">
+  © 2026 Sovereign Nation Esports · sovereignesports.com. Not affiliated with Ubisoft. Rainbow Six Siege is a trademark of Ubisoft Entertainment.
+</footer>
+
+<script>
+  const players = [
+    { tag:'Jayden',  role:'', status:'Active',  icons:['brain','radio'] },
+    { tag:'Spintownnn',role:'',    status:'Active',  icons:['hammer','target'] },
+    { tag:'konjjure.SOV', role:'',  status:'Active',  icons:['zap','crosshair'] },
+    { tag:'Frilo', role:'',      status:'Active',  icons:['shield','eye'] },
+    { tag:'Dreyo', role:'Support',     status:'Actice', icons:['life-buoy','user-plus'] }
+    { tag:'Dent_The_Cook',  role:'Team Manager', status:'Active',  icons:['brain','radio'] },
+    { tag:'Gabe_so_fr',  role:'NG Team Captain/manager', status:'Active',  icons:['brain','radio'] },
+    { tag:'Hunter',  role:'NG Staff/NG Team Captain/Social Media Manager', status:'Active',  icons:['brain','radio'] },
+  ];
+  const cards = document.getElementById('cards');
+  players.forEach(p => {
+    const open = p.status === 'Recruiting';
+    const el = document.createElement('article');
+    el.className = 'card clip bg-panel border ' + (open ? 'border-dashed border-amber/60' : 'border-edge') + ' p-5';
+    el.innerHTML = `
+      <div class="aspect-[4/5] mb-4 bg-ink border border-edge grid-bg flex items-center justify-center">
+        <i data-lucide="${open ? 'user-plus' : 'user'}" class="w-16 h-16 ${open ? 'text-amber' : 'text-edge'}"></i>
+      </div>
+      <h3 class="font-display text-3xl font-bold tracking-wide">${p.tag}</h3>
+      <p class="text-tac font-medium text-sm">${p.role}</p>
+      <div class="mt-4 flex items-center justify-between">
+        <span class="flex items-center gap-2 text-xs ${open ? 'text-amber' : 'text-emerald-400'}"><span class="w-2 h-2 rounded-full ${open ? 'bg-amber' : 'bg-emerald-400'}"></span>${p.status}</span>
+        <span class="flex gap-1.5">${p.icons.map(i => `<span class="w-7 h-7 border border-edge bg-ink flex items-center justify-center"><i data-lucide="${i}" class="w-4 h-4 text-tac"></i></span>`).join('')}</span>
+      </div>`;
+    cards.appendChild(el);
+  });
+
+  document.getElementById('apply').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target, msg = document.getElementById('msg');
+    if (!f.checkValidity()) { msg.textContent = 'Complete every field and use a full tracker URL starting with https://.'; msg.className = 'text-sm text-amber'; return; }
+    msg.textContent = 'Application received. A coach will contact you on Discord within 72 hours.';
+    msg.className = 'text-sm text-emerald-400';
+    f.reset();
+  });
+
+  if (window.lucide) lucide.createIcons();
+</script>
+</body>
+</html>
